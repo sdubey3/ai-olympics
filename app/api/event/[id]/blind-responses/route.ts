@@ -4,6 +4,7 @@ import { getEvent, getResponsesForEvent } from "@/lib/db/queries";
 import { getBlindMapping } from "@/lib/shuffle";
 import { BLIND_LABELS } from "@/lib/constants";
 import { MODEL_IDS } from "@/lib/event-config";
+import { checkAndTransitionEvents } from "@/lib/transitions";
 import type { BlindModel } from "@/lib/types";
 
 export async function GET(
@@ -12,6 +13,7 @@ export async function GET(
 ) {
   const { id: eventId } = await params;
   const db = getDb();
+  await checkAndTransitionEvents(db);
   const event = await getEvent(db, eventId);
 
   if (!event) {
