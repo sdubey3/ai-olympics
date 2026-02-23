@@ -1,0 +1,26 @@
+{
+  "name": "@ai-olympics/ui",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles": "./src/styles/globals.css"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@ai-olympics/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@ai-olympics/tsconfig": "workspace:*",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

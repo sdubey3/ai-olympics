@@ -1,0 +1,17 @@
+{
+  "name": "ai-olympics",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "db:push": "cd packages/shared && pnpm drizzle-kit push",
+    "db:seed": "tsx packages/shared/src/db/seed.ts"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
